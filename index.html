@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abulfazıl'ın Sitesi</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+        .random-button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .random-button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hoş Geldiniz Abulfazıl Kanalına</h1>
+    <p>web siteme hoşgeldiniz!</p>
+
+    <a href="https://www.youtube.com/@HileoyuncuGamerH%C4%B0LEUSTASI" target="_blank">
+        <button class="button">Kanalıma Git</button>
+    </a>
+
+    <br><br>
+
+    <button class="button" onclick="playSound()">Abone Ol</button>
+
+    <audio id="subscribeSound">
+        <source src="https://www.myinstants.com/media/sounds/vine-boom.mp3" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+
+    <button class="random-button" onclick="playRandomSound()">Rastgele Ses Çıkar</button>
+
+    <script>
+        function playSound() {
+            document.getElementById("subscribeSound").play();
+        }
+
+        function playRandomSound() {
+            let sounds = [
+                "https://www.myinstants.com/media/sounds/vine-boom.mp3",
+                "https://www.myinstants.com/media/sounds/bruh.mp3",
+                "https://www.myinstants.com/media/sounds/oof.mp3",
+                "https://www.myinstants.com/media/sounds/fart-with-reverb.mp3",
+                "https://www.myinstants.com/media/sounds/wilhelm-scream.mp3",
+                "https://www.myinstants.com/media/sounds/noot-noot.mp3",
+                "https://www.myinstants.com/media/sounds/mario-jump.mp3",
+                "https://www.myinstants.com/media/sounds/hello-there.mp3",
+                "https://www.myinstants.com/media/sounds/what-da-dog-doin.mp3",
+                "https://www.myinstants.com/media/sounds/nani.mp3",
+                "https://www.myinstants.com/media/sounds/yeet.mp3",
+                "https://www.myinstants.com/media/sounds/oh-no.mp3",
+                "https://www.myinstants.com/media/sounds/goodbye.mp3",
+                "https://www.myinstants.com/media/sounds/epic-fail.mp3",
+                "https://www.myinstants.com/media/sounds/reeee.mp3",
+                "https://www.myinstants.com/media/sounds/sonic-boom.mp3",
+                "https://www.myinstants.com/media/sounds/just-do-it.mp3",
+                "https://www.myinstants.com/media/sounds/yeehaw.mp3",
+                "https://www.myinstants.com/media/sounds/boo.mp3",
+                "https://www.myinstants.com/media/sounds/super-mario.mp3"
+            ];
+            
+            let randomIndex = Math.floor(Math.random() * sounds.length);
+            let audio = new Audio(sounds[randomIndex]);
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
